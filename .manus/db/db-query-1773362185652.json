@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `tokenProcessing` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`token` text NOT NULL,\n\t`tokenPreview` varchar(50) NOT NULL,\n\t`oauthUrl` text NOT NULL,\n\t`status` enum('pending','success','error','captcha_required') NOT NULL DEFAULT 'pending',\n\t`errorMessage` text,\n\t`processedAt` timestamp,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `tokenProcessing_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2fLK43dEoq3rFis.root --database XbRScsn3YqMa5XXyPKmujV --execute CREATE TABLE `tokenProcessing` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`token` text NOT NULL,\n\t`tokenPreview` varchar(50) NOT NULL,\n\t`oauthUrl` text NOT NULL,\n\t`status` enum('pending','success','error','captcha_required') NOT NULL DEFAULT 'pending',\n\t`errorMessage` text,\n\t`processedAt` timestamp,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `tokenProcessing_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 630
+}

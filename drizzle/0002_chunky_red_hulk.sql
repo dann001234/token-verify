@@ -1,0 +1,1 @@
+ALTER TABLE `tokenProcessing` DROP COLUMN `userId`;
